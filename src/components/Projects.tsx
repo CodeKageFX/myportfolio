@@ -5,12 +5,12 @@ const Projects = () => {
   return (
     <div className="flex gap-2">
       <SEO
-        title="Projects - CodeKage Portfolio | Web Development Showcase"
-        description="Explore my latest web development projects featuring React, Node.js, TypeScript, and modern frameworks. See live demos and source code."
-        keywords="web development projects, React projects, Node.js applications, portfolio projects, CodeKage projects, full stack applications"
+        title="Projects - Production-Ready Solutions | CodeKage Portfolio"
+        description="Explore production-ready web applications built with React, Next.js, and TypeScript. Each project demonstrates clean architecture, scalable design, and proven results."
+        keywords="web development projects, React projects, Next.js applications, TypeScript projects, production-ready apps, CodeKage portfolio, scalable web solutions"
         canonicalUrl="https://codekage.pxxl.xyz/projects"
-        ogTitle="Web Development Projects by CodeKage"
-        ogDescription="Innovative web applications and development projects showcasing modern technologies and best practices."
+        ogTitle="Production-Ready Web Applications by CodeKage"
+        ogDescription="Real-world web applications solving real problems. See problem-solution frameworks, tech stacks, and proven results."
         ogImage="https://codekage.pxxl.xyz/images/projects.png"
         ogUrl="https://codekage.pxxl.xyz/projects"
         ogType="website"

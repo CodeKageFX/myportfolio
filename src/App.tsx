@@ -29,9 +29,8 @@ const App = () => {
           </AnimatePresence>
         </main>
         
-        <footer className="py-12 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs uppercase tracking-widest">
+        <footer className="py-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-xs uppercase tracking-widest">
             <p>&copy; {new Date().getFullYear()} CodeKage. All Rights Reserved.</p>
-            <p className="font-bold">Built for Startups & Businesses</p>
         </footer>
       </div>
     </div>

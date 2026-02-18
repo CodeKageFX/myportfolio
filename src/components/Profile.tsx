@@ -24,7 +24,12 @@ const Profile = () => {
             <div className="flex flex-col gap-6">
                 <div className="space-y-1">
                     <h1 className="text-xl text-[whitesmoke] font-bold">CodeKage👑</h1>
-                    <p className="text-sm">A results-driven <span className="font-semibold">Frontend Engineer</span> & <span className="font-semibold">Design-Oriented Developer</span> Specializing in building performant interfaces with a passion for UX.</p>
+                    <p className="text-[#4770FF] font-semibold text-base">
+                        Creating innovative solutions and captivating designs
+                    </p>
+                    <p className="text-sm text-gray-400 leading-relaxed">
+                        <span className="text-white font-medium">University student by day, visionary creator by night.</span> As a <span className="text-white font-medium">self-taught developer</span>, I specialize in building production-ready applications with <span className="text-white font-medium">React, Next.js, and TypeScript</span>.
+                    </p>
                 </div>
     
                 <div>
