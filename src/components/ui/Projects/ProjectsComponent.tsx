@@ -43,6 +43,17 @@ const ProjectsComponent = () => {
             link: "https://ip-address-tracker-seven-sigma.vercel.app"
         },
         {
+            image: "/assets/my-projects/dokugen.png",
+            name: "Dokugen",
+            description: "Generate professional READMEs with AI",
+            problem: "Currently, users have to manually select and copy the generated generator code, which is slightly inconvenient, especially for long outputs.",
+            solution: "Added a copy-to-clipboard button near the generator code so users can quickly copy the content with one click.",
+            techStack: ["Next", "TypeScript", "Tailwind CSS"],
+            results: "Improved user experience by enabling one-click copying of code.",
+            type: "OpenSource",
+            link: "https://dokugen-readme.vercel.app"
+        },
+        {
             image: "/assets/my-projects/hue.png",
             name: "HueIsTheOne",
             description: "Color palette generator and explorer",
@@ -139,7 +150,7 @@ const ProjectsComponent = () => {
                             filterBy === el && "bg-[#4770FF] hover:bg-[#476ffff1] text-white"
                         )}
                     >
-                        {el}
+                        {el}({el === "All" ? myProjects.length : myProjects.filter((p) => p.type === el).length})
                     </Button>
                 ))}
             </div>
@@ -199,7 +210,7 @@ const ProjectsComponent = () => {
                                             <div className="flex items-start gap-2">
                                                 <CodeIcon className="w-4 h-4 mt-1 text-[#4770FF] flex-shrink-0" />
                                                 <div>
-                                                    <p className="text-xs font-semibold text-gray-300 uppercase tracking-wider">Problem</p>
+                                                    <p className="text-xs font-semibold text-gray-300 uppercase tracking-wider">{ project.type === "OpenSource" ? "Issue" : "Problem" }</p>
                                                     <p className="text-sm text-gray-400">{project.problem}</p>
                                                 </div>
                                             </div>
