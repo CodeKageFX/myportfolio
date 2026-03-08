@@ -124,6 +124,49 @@ const ProjectsComponent = () => {
         // }
     ]
 
+    const headerContent = {
+        All: {
+            title: (
+                <>
+                    Real-World Solutions & <span className="text-[#4770FF]">Proven Results</span>
+                </>
+            ),
+            description: "Production-ready applications solving real problems. Each project demonstrates clean architecture, scalable design, and business impact.",
+        },
+        SaaS: {
+            title: (
+                <>
+                    Software as a Service & <span className="text-[#4770FF]">Scalable Systems</span>
+                </>
+            ),
+            description: "Full-stack SaaS platforms built with modern technologies, focusing on user experience, scalability, and robust architecture.",
+        },
+        OpenSource: {
+            title: (
+                <>
+                    Open-Source Contributions & <span className="text-[#4770FF]">Community Work</span>
+                </>
+            ),
+            description: "Proudly contributing to the developer community. Projects built to solve developer pain points and improve existing ecosystems.",
+        },
+        Clients: {
+            title: (
+                <>
+                    Client Projects & <span className="text-[#4770FF]">Professional Solutions</span>
+                </>
+            ),
+            description: "Delivering value to clients through tailored web applications, solving specific business needs with high-quality code.",
+        },
+        Practice: {
+            title: (
+                <>
+                    Personal Experiments & <span className="text-[#4770FF]">Learning Projects</span>
+                </>
+            ),
+            description: "A collection of projects built to explore new technologies, master advanced concepts, and push the boundaries of my skills.",
+        },
+    }
+
     const filteredBy = filterBy === "All" ? myProjects : myProjects.filter((el) => el.type === filterBy)
 
     const filterButtons = ["All", "SaaS", "OpenSource", "Clients", "Practice"]
@@ -132,10 +175,10 @@ const ProjectsComponent = () => {
         <div className="w-2/3 h-[500px] max-[920px]:min-h-screen max-[920px]:w-full overflow-auto bg-black px-6 py-8 md:px-8 rounded-lg space-y-4">
             <div className="space-y-3">
                 <h2 className="text-4xl max-[629px]:text-xl font-semibold">
-                    Real-World Solutions & <span className="text-[#4770FF]">Proven Results</span>
+                    {headerContent[filterBy as keyof typeof headerContent].title}
                 </h2>
                 <p className="text-gray-400">
-                    Production-ready applications solving real problems. Each project demonstrates clean architecture, scalable design, and business impact.
+                    {headerContent[filterBy as keyof typeof headerContent].description}
                 </p>
             </div>
             
