@@ -22,7 +22,7 @@ To view the portfolio locally or explore its codebase, follow these steps:
 ### Development Setup
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/AbdulrahmanLuqman/my-portfolio.git
+    git clone https://github.com/CodeKageFX/my-portfolio.git
     cd my-portfolio
     ```
 2.  **Install dependencies**:
@@ -101,7 +101,7 @@ This project is currently unlicensed. Please contact the author for details rega
 **Abdulrahman Luqman (CodeKage)**
 A self-taught Frontend Engineer and university student passionate about building production-ready applications with a focus on clean architecture, performance, and delivering tangible business results.
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AbdulrahmanLuqman/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CodeKageFX/)
 [![X (formerly Twitter)](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/codekagefx)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/codekage-fx-80243a23a/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:luqmanola60@gmail.com)

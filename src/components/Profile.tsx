@@ -5,7 +5,7 @@ const Profile = () => {
     const socials = [
         {
             icon : GithubIcon,
-            href : "https://github.com/AbdulrahmanLuqman"
+            href : "https://github.com/CodeKageFX"
         },
         {
             icon : TwitterIcon,

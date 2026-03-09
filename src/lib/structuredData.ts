@@ -7,7 +7,7 @@ export const personSchema = {
   "jobTitle": "Full Stack Developer",
   "url": "https://codekage.pxxl.xyz",
   "sameAs": [
-    "https://github.com/AbdulrahmanLuqman",
+    "https://github.com/CodeKageFX",
     "https://www.linkedin.com/in/abdulrahman-luqman-80243a23a",
     "https://x.com/luqmanola60"
   ],

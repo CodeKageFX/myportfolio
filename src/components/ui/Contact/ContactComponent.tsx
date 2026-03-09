@@ -44,7 +44,7 @@ const ContactComponent = () => {
             icon: GithubIcon,
             label: "GitHub",
             value: "@CodeKageFX",
-            href: "https://github.com/AbdulrahmanLuqman/",
+            href: "https://github.com/CodeKageFX/",
             color: "text-gray-400",
             description: "Check out my code"
         }
