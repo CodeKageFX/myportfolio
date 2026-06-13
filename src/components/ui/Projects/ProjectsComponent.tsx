@@ -10,6 +10,17 @@ const ProjectsComponent = () => {
     
     const myProjects = [
         {
+            image: "/assets/my-projects/saveme.png",
+            name: "SaveMe",
+            description: "AI-powered personal finance and meal planning for young Nigerians",
+            problem: "Young Nigerians living on weekly allowances have no practical tool built for their reality — generic budgeting apps don't understand naira, local food, or the 8k-before-Thursday struggle",
+            solution: "Built a contextual AI app that splits your weekly income automatically, generates a 7-day Nigerian meal plan from what's already in your kitchen, tracks daily expenses, and reviews your week with a score and actionable advice",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Groq/Llama 3.3", "Stunk"],
+            results: "30 users in the first few days, built and shipped solo as a university student in under 2 weeks",
+            type: "SaaS",
+            link: "https://saveme-seven.vercel.app"
+        },
+        {
             image: "/assets/my-projects/anyday.png",
             name: "CelebrateAnyDay",
             description: "Create magical moments for any occasion",
@@ -30,6 +41,17 @@ const ProjectsComponent = () => {
             results: "Helping developers discover meaningful open-source opportunities with smart filtering and recommendations",
             type: "SaaS",
             link: "https://open-views.vercel.app"
+        },
+        {
+            image: "/assets/my-projects/ibrish.png",
+            name: "Ibrish",
+            description:"Briniging your construction ideas to life",
+            problem: "A construction company, ibrish, had no web presence and needed a way to showcase their work to potential clients",
+            solution: "Built a modern, responsive website for a construction company that showcases their portfolio and services",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+            results: "The company now has a professional online presence and can showcase their work to potential clients",
+            type: "Clients",
+            link: "https://ibrish-one.vercel.app/"
         },
         {
             image: "/assets/my-projects/ipAddress.png",

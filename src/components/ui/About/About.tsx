@@ -48,7 +48,7 @@ const AboutComponent = () => {
             <div className="space-y-3">
                 <div className="flex justify-between items-center flex-wrap-reverse gap-2">
                     <h2 className="text-3xl max-[629px]:text-xl font-semibold">
-                        Frontend Engineer
+                        Fullstack Engineer
                         <span className="text-[#4770FF]"> | CodeKage</span>
                     </h2>
                     <motion.span
@@ -61,10 +61,10 @@ const AboutComponent = () => {
                     </motion.span>
                 </div>
                 <p className="text-lg max-[629px]:text-base min-[484px]:w-[450px] w-full text-gray-300 leading-relaxed">
-                    Building <span className="font-bold text-white">production-ready web applications</span> that solve real business problems. 
-                    I specialize in <span className="font-bold text-white">React, Next.js, and TypeScript</span>, with a focus on 
-                    <span className="font-bold text-white"> clean architecture, performance optimization,</span> and 
-                    <span className="font-bold text-white"> conversion-focused design</span>.
+                    Building <span className="font-bold text-white">production-ready fullstack applications</span> that solve real business problems. 
+                    I specialize in <span className="font-bold text-white">Node.js, Express, PostgreSQL, React, Next.js, and TypeScript</span>, with a focus on 
+                    <span className="font-bold text-white"> robust backend APIs, database design (Prisma, Drizzle),</span> and 
+                    <span className="font-bold text-white"> clean architecture</span>.
                 </p>
                 <p className="text-sm text-gray-500 italic">
                     Driven by discipline, analytical thinking, and a commitment to continuous improvement.

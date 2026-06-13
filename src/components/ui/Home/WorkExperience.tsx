@@ -22,7 +22,7 @@ const WorkExperience = () => {
                 </div>
                 <div>
                     <p className="font-bold text-white">HNG Internship</p>
-                    <p className="text-sm text-gray-400">Frontend Developer Trainee</p>
+                    <p className="text-sm text-gray-400">Fullstack Developer Trainee</p>
                 </div>
             </div>
         </div>

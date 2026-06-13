@@ -17,9 +17,15 @@ export const personSchema = {
     "React",
     "Nextjs",
     "Node.js",
+    "Express",
+    "PostgreSQL",
+    "Drizzle ORM",
+    "Prisma ORM",
     "Python",
     "Web Development",
-    "Software Engineering"
+    "Software Engineering",
+    "Backend Development",
+    "Full Stack Development"
   ],
   "description": "Professional full-stack developer with expertise in modern web technologies and software engineering practices.",
   "image": "https://codekage.pxxl.xyz/assets/me.jpg",

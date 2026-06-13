@@ -1,19 +1,19 @@
-import { LaptopIcon, LayoutIcon, SmartphoneIcon, RocketIcon } from "lucide-react"
+import { LayoutIcon, ServerIcon, DatabaseIcon, RocketIcon } from "lucide-react"
 import { motion } from "motion/react"
 
 const Services = () => {
     const services = [
         {
-            name: "Business Solutions",
-            icon: LaptopIcon
-        },
-        {
-            name: "Product Design",
+            name: "Frontend Development",
             icon: LayoutIcon
         },
         {
-            name: "Mobile Solutions",
-            icon: SmartphoneIcon
+            name: "Backend & APIs",
+            icon: ServerIcon
+        },
+        {
+            name: "Database Design",
+            icon: DatabaseIcon
         },
         {
             name: "SaaS Development",

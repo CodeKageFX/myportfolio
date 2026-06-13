@@ -10,12 +10,12 @@ const About = () => {
   return (
     <div className="flex gap-2">
       <SEO
-        title="About CodeKage - Frontend Engineer | Production-Ready Applications"
-        description="Frontend Engineer specializing in production-ready web applications. Proven track record building scalable solutions with React, Next.js, and TypeScript. Driven by discipline and continuous improvement."
-        keywords="about CodeKage, frontend engineer, production-ready applications, React developer, Next.js expert, TypeScript, clean architecture, scalable web development"
+        title="About CodeKage - Fullstack Engineer | Production-Ready Applications"
+        description="Fullstack Engineer specializing in building production-ready web applications. Proven track record building scalable backend APIs (Node.js, Express) and frontend experiences (React, Next.js)."
+        keywords="about CodeKage, fullstack engineer, backend developer, production-ready applications, React developer, Next.js, Node.js, Express, Drizzle, Prisma, PostgreSQL, clean architecture, scalable web development"
         canonicalUrl="https://codekage.pxxl.xyz/about"
-        ogTitle="About CodeKage - Elite Frontend Engineering"
-        ogDescription="Building production-ready applications that solve real business problems. Specializing in clean architecture, performance, and conversion-focused design."
+        ogTitle="About CodeKage - Elite Fullstack Engineering"
+        ogDescription="Building production-ready fullstack applications that solve real business problems. Specializing in clean architecture, robust backend APIs, and database modeling."
         schema={personSchema}
       />
       <Profile />

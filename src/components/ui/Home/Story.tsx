@@ -30,7 +30,7 @@ const Story = () => {
                     </p>
 
                     <p>
-                        Today, I build with <span className="text-[#4770FF] font-semibold">React, Next.js, and TypeScript</span>, focusing on clean architecture, performance optimization, and user experience. Every project is an opportunity to deliver real business value while pushing my technical capabilities further.
+                        Today, I build fullstack applications using <span className="text-[#4770FF] font-semibold">Node.js, Express, PostgreSQL, Drizzle, Prisma, React, Next.js, and TypeScript</span>. I focus on database performance, secure backend APIs, clean architecture, and responsive user experiences.
                     </p>
 
                     {/* Pull Quote */}

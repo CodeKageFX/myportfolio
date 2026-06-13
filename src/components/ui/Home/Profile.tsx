@@ -58,7 +58,7 @@ const Profile = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
                 src="/assets/me.jpg" 
-                alt="CodeKage - Frontend Engineer"
+                alt="CodeKage - Fullstack Engineer"
                 className="transition-all duration-1000" 
             />
         </div>
@@ -66,14 +66,14 @@ const Profile = () => {
             <div className="space-y-3">
                 <div className="space-y-2">
                     <h1 className="text-2xl text-white font-bold leading-tight">
-                        Frontend Engineer
+                        Fullstack Engineer
                     </h1>
                     <p className="text-[#4770FF] font-semibold text-lg">
-                        Building fast, scalable, and conversion-focused web apps
+                        Building robust, scalable, and conversion-focused fullstack apps
                     </p>
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed">
-                    I build modern web applications using <span className="text-white font-medium">React, Next.js, TypeScript</span>, and scalable frontend architectures. Focused on <span className="text-white font-medium">clean code, performance,</span> and delivering <span className="text-white font-medium">business results</span>.
+                    I build modern fullstack applications using <span className="text-white font-medium">Node.js, Express, PostgreSQL, React, Next.js, and TypeScript</span>. Focused on <span className="text-white font-medium">scalable architectures, database design,</span> and delivering <span className="text-white font-medium">business results</span>.
                 </p>
             </div>
 
