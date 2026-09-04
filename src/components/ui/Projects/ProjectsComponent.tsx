@@ -10,6 +10,17 @@ const ProjectsComponent = () => {
     
     const myProjects = [
         {
+            image: "/assets/my-projects/claimmyday.png",
+            name: "ClaimMyDay",
+            description: "Own a day. Tell your story — forever.",
+            problem: "Life's most meaningful days disappear into journals nobody reopens or social posts that get buried and scrolled past — there's no place built specifically to permanently mark a single day that mattered",
+            solution: "Built a platform where users claim one of 365 calendar days (rolling, unlocking daily at 10PM, past days always claimable) for ₦5,000/$5, write a permanent, unchangeable memory tied to that exact date, tagged with a mood that colors the day on a GitHub-contribution-style grid. Real payments via Bachs, hardened webhook-based fulfillment with idempotency and concurrency-safe claiming, email verification via SendByte, built with Next.js, Prisma, Supabase, and Stunk for state management",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "Supabase", "Stunk", "Bachs", "SendByte"],
+            results: "Launched and live with real paying users from day one, including real revenue and organic X/social growth",
+            type: "SaaS",
+            link: "https://claimmyday.cv"
+        },
+        {
             image: "/assets/my-projects/saveme.png",
             name: "SaveMe",
             description: "AI-powered personal finance and meal planning for young Nigerians",
@@ -72,7 +83,7 @@ const ProjectsComponent = () => {
             solution: "Added a copy-to-clipboard button near the generator code so users can quickly copy the content with one click.",
             techStack: ["Next", "TypeScript", "Tailwind CSS"],
             results: "Improved user experience by enabling one-click copying of code.",
-            type: "OpenSource",
+            type: "Contribution",
             link: "https://dokugen-readme.vercel.app"
         },
         {
@@ -163,7 +174,7 @@ const ProjectsComponent = () => {
             ),
             description: "Full-stack SaaS platforms built with modern technologies, focusing on user experience, scalability, and robust architecture.",
         },
-        OpenSource: {
+        Contribution: {
             title: (
                 <>
                     Open-Source Contributions & <span className="text-[#4770FF]">Community Work</span>
@@ -191,7 +202,7 @@ const ProjectsComponent = () => {
 
     const filteredBy = filterBy === "All" ? myProjects : myProjects.filter((el) => el.type === filterBy)
 
-    const filterButtons = ["All", "SaaS", "OpenSource", "Clients", "Practice"]
+    const filterButtons = ["All", "SaaS", "Contribution", "Clients", "Practice"]
 
     return (
         <div className="w-2/3 h-[500px] max-[920px]:min-h-screen max-[920px]:w-full overflow-auto bg-black px-6 py-8 md:px-8 rounded-lg space-y-4">
