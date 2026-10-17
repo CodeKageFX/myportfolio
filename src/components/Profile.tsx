@@ -28,7 +28,7 @@ const Profile = () => {
                         Creating innovative solutions and robust backend systems
                     </p>
                     <p className="text-sm text-gray-400 leading-relaxed">
-                        <span className="text-white font-medium">University student by day, visionary creator by night.</span> As a <span className="text-white font-medium">self-taught developer</span>, I specialize in building production-ready fullstack applications with <span className="text-white font-medium">Node.js, Express, PostgreSQL, React, Next.js, and TypeScript</span>.
+                        <span className="text-white font-medium">University student by day, visionary creator by night.</span> As a <span className="text-white font-medium">Software Engineer</span>, I specialize in building production-ready applications with <span className="text-white font-medium">Go, NestJS, Node.js, Express, Docker, PostgreSQL, React, Next.js, TanStack, and TypeScript</span>.
                     </p>
                 </div>
     

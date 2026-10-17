@@ -14,7 +14,7 @@ const AboutComponent = () => {
             what: "Projects Shipped"
         },
         {
-            number: 5,
+            number: 10,
             what: "Technologies Mastered"
         }
     ]
@@ -48,7 +48,7 @@ const AboutComponent = () => {
             <div className="space-y-3">
                 <div className="flex justify-between items-center flex-wrap-reverse gap-2">
                     <h2 className="text-3xl max-[629px]:text-xl font-semibold">
-                        Fullstack Engineer
+                        Software Engineer
                         <span className="text-[#4770FF]"> | CodeKage</span>
                     </h2>
                     <motion.span
@@ -61,8 +61,8 @@ const AboutComponent = () => {
                     </motion.span>
                 </div>
                 <p className="text-lg max-[629px]:text-base min-[484px]:w-[450px] w-full text-gray-300 leading-relaxed">
-                    Building <span className="font-bold text-white">production-ready fullstack applications</span> that solve real business problems. 
-                    I specialize in <span className="font-bold text-white">Node.js, Express, PostgreSQL, React, Next.js, and TypeScript</span>, with a focus on 
+                    Building <span className="font-bold text-white">production-ready scalable software</span> that solves real business problems. 
+                    I specialize in <span className="font-bold text-white">Go, NestJS, Node.js, Express, Docker, PostgreSQL, React, Next.js, TanStack, and TypeScript</span>, with a focus on 
                     <span className="font-bold text-white"> robust backend APIs, database design (Prisma, Drizzle),</span> and 
                     <span className="font-bold text-white"> clean architecture</span>.
                 </p>

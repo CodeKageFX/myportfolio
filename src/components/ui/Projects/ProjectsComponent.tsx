@@ -1,12 +1,138 @@
 import { Button } from "../button"
 import { CodeIcon, RocketIcon, CheckCircle2Icon } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { motion } from "motion/react"
+import { useLocation, useNavigate } from "react-router-dom"
+
+const TAB_MAP: Record<string, string> = {
+    all: "All",
+    saas: "SaaS",
+    contribution: "Contribution",
+    contributions: "Contribution",
+    contrib: "Contribution",
+    opensource: "Contribution",
+    "open-source": "Contribution",
+    "open_source": "Contribution",
+    client: "Clients",
+    clients: "Clients",
+    practice: "Practice",
+    practices: "Practice",
+    experiment: "Practice",
+    experiments: "Practice",
+}
+
+const TAB_TO_PARAM: Record<string, string> = {
+    All: "",
+    SaaS: "saas",
+    Contribution: "contribution",
+    Clients: "client",
+    Practice: "practice",
+}
+
+const KNOWN_TAB_KEYS = new Set([
+    "all",
+    "saas",
+    "contribution",
+    "contributions",
+    "contrib",
+    "opensource",
+    "open-source",
+    "open_source",
+    "client",
+    "clients",
+    "practice",
+    "practices",
+    "experiment",
+    "experiments",
+    "tab",
+    "filter",
+    "type",
+    "category",
+])
+
+export function getCategoryFromSearch(search: string): string {
+    const params = new URLSearchParams(search)
+
+    // 1. Check explicit key-value parameters (?tab=..., ?filter=..., ?type=..., ?category=...) case-insensitively
+    for (const [rawKey, rawVal] of params.entries()) {
+        const key = rawKey.toLowerCase().trim()
+        if (["tab", "filter", "type", "category"].includes(key)) {
+            const val = rawVal.toLowerCase().trim()
+            if (TAB_MAP[val]) return TAB_MAP[val]
+        }
+    }
+
+    // 2. Check standalone flag parameters (?client, ?clients, ?saas, ?contribution, ?practice, ?all)
+    for (const [rawKey] of params.entries()) {
+        const key = rawKey.toLowerCase().trim()
+        if (TAB_MAP[key]) return TAB_MAP[key]
+    }
+
+    return "All"
+}
+
+export function buildSearch(currentSearch: string, newCategory: string): string {
+    const currentParams = new URLSearchParams(currentSearch)
+    const hadTabKey = Array.from(currentParams.keys()).some((k) => k.toLowerCase().trim() === "tab")
+    const hadFilterKey = Array.from(currentParams.keys()).some((k) => k.toLowerCase().trim() === "filter")
+    const hadTypeKey = Array.from(currentParams.keys()).some((k) => k.toLowerCase().trim() === "type")
+    const hadCategoryKey = Array.from(currentParams.keys()).some((k) => k.toLowerCase().trim() === "category")
+
+    // Filter out existing tab-related keys to prevent accumulating parameters
+    const remainingParams: [string, string][] = []
+    for (const [k, v] of currentParams.entries()) {
+        if (!KNOWN_TAB_KEYS.has(k.toLowerCase().trim())) {
+            remainingParams.push([k, v])
+        }
+    }
+
+    const baseParams = new URLSearchParams(remainingParams)
+    const targetParam = TAB_TO_PARAM[newCategory]
+
+    if (!targetParam) {
+        // "All" selected -> clear tab search param
+        const str = baseParams.toString()
+        return str ? `?${str}` : ""
+    }
+
+    if (hadTabKey) {
+        baseParams.set("tab", targetParam)
+        return `?${baseParams.toString()}`
+    }
+    if (hadFilterKey) {
+        baseParams.set("filter", targetParam)
+        return `?${baseParams.toString()}`
+    }
+    if (hadTypeKey) {
+        baseParams.set("type", targetParam)
+        return `?${baseParams.toString()}`
+    }
+    if (hadCategoryKey) {
+        baseParams.set("category", targetParam)
+        return `?${baseParams.toString()}`
+    }
+
+    // Standalone flag style (?client, ?saas, etc.)
+    const str = baseParams.toString()
+    return str ? `?${str}&${targetParam}` : `?${targetParam}`
+}
 
 const ProjectsComponent = () => {
-    const [filterBy, setFilterBy] = useState("All")
+    const location = useLocation()
+    const navigate = useNavigate()
     const [expandedProject, setExpandedProject] = useState<number | null>(null)
+
+    const filterBy = useMemo(() => getCategoryFromSearch(location.search), [location.search])
+
+    const handleFilterChange = (category: string) => {
+        setExpandedProject(null)
+        const nextSearch = buildSearch(location.search, category)
+        navigate({
+            pathname: location.pathname,
+            search: nextSearch,
+        })
+    }
     
     const myProjects = [
         {
@@ -19,6 +145,17 @@ const ProjectsComponent = () => {
             results: "Launched and live with real paying users from day one, including real revenue and organic X/social growth",
             type: "SaaS",
             link: "https://claimmyday.cv"
+        },
+        {
+            image: "/assets/my-projects/a3.png",
+            name: "A3Creations",
+            description: "Frames, resin art, and personalized decor — make your space feel like you.",
+            problem: "A3 Creations needed a dedicated online presence to showcase its frames, resin products, wall collages, and customized creations while making it easier for potential customers to discover products and place enquiries.",
+            solution: "Designed and developed a visually distinctive, responsive marketing website featuring animated product showcases, real product photography, a student room decor promotion, and contextual WhatsApp click-to-chat links. Built around a mobile-first experience that directs interested visitors straight to the business on WhatsApp.",
+            techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Motion"],
+            results: "Delivered a dedicated digital showcase for the brand, connecting product discovery with direct WhatsApp enquiries and highlighting its customizable creations and student decor packages.",
+            type: "Clients",
+            link: "https://a3creations.pxxl.click"
         },
         {
             image: "/assets/my-projects/saveme.png",
@@ -220,7 +357,7 @@ const ProjectsComponent = () => {
                     <Button
                         key={el}
                         disabled={el === filterBy}
-                        onClick={() => setFilterBy(el)}
+                        onClick={() => handleFilterChange(el)}
                         className={cn(
                             "bg-[#202020bb] hover:bg-[#292929] text-white cursor-pointer text-sm",
                             filterBy === el && "bg-[#4770FF] hover:bg-[#476ffff1] text-white"

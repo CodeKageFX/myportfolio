@@ -4,7 +4,7 @@ export const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "CodeKage",
-  "jobTitle": "Full Stack Developer",
+  "jobTitle": "Software Engineer",
   "url": "https://codekage.pxxl.xyz",
   "sameAs": [
     "https://github.com/CodeKageFX",
@@ -12,11 +12,15 @@ export const personSchema = {
     "https://x.com/luqmanola60"
   ],
   "knowsAbout": [
+    "Go",
+    "NestJS",
+    "Node.js",
+    "Docker",
+    "TanStack",
     "JavaScript",
     "TypeScript",
     "React",
     "Nextjs",
-    "Node.js",
     "Express",
     "PostgreSQL",
     "Drizzle ORM",
@@ -27,7 +31,7 @@ export const personSchema = {
     "Backend Development",
     "Full Stack Development"
   ],
-  "description": "Professional full-stack developer with expertise in modern web technologies and software engineering practices.",
+  "description": "Professional Software Engineer with expertise in Go, NestJS, Node.js, React, Next.js, Docker, and modern scalable software systems.",
   "image": "https://codekage.pxxl.xyz/assets/me.jpg",
   "email": "luqmanola60@gmail.com"
 };
@@ -61,11 +65,11 @@ export const portfolioSchema = {
   "author": {
     "@type": "Person",
     "name": "CodeKage",
-    "jobTitle": "Full Stack Developer"
+    "jobTitle": "Software Engineer"
   },
   "dateCreated": "2025",
   "inLanguage": "en-US",
-  "keywords": "web development, portfolio, full stack developer, React, Node.js"
+  "keywords": "software engineer, web development, portfolio, React, Go, NestJS, Docker, Node.js"
 };
 
 export const organizationSchema = {

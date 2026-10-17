@@ -7,11 +7,11 @@ const Contact = () => {
     <div className="flex gap-2">
       <SEO
         title="Contact CodeKage - Let's Build Something Exceptional"
-        description="Ready to build exceptional web applications? Contact CodeKage directly via Email, WhatsApp, Twitter, LinkedIn, or GitHub. Quick response guaranteed within 24 hours."
-        keywords="contact CodeKage, hire fullstack engineer, hire backend developer, React developer, Node.js development, web development services, project consultation, collaboration, freelance developer"
+        description="Ready to build exceptional software systems and web applications? Contact CodeKage directly via Email, WhatsApp, Twitter, LinkedIn, or GitHub. Quick response guaranteed within 24 hours."
+        keywords="contact CodeKage, hire software engineer, hire backend developer, Go developer, React developer, Node.js development, web development services, project consultation, collaboration, freelance developer"
         canonicalUrl="https://codekage.pxxl.xyz/contact"
-        ogTitle="Contact CodeKage - Fullstack Engineer Available for Hire"
-        ogDescription="Let's work together to build production-ready web applications. Multiple contact methods available with quick response time."
+        ogTitle="Contact CodeKage - Software Engineer Available for Hire"
+        ogDescription="Let's work together to build production-ready software systems and web applications. Multiple contact methods available with quick response time."
         ogImage="https://codekage.pxxl.xyz/images/contact.png"
       />
       <Profile />

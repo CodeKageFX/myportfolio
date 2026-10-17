@@ -23,9 +23,9 @@ export interface SEOProps {
 }
 
 const useSEO = ({
-  title = 'CodeKage - Full Stack Developer Portfolio',
-  description = 'Professional full-stack developer specializing in modern web technologies. View my projects, skills, and experience in React, Node.js, and more.',
-  keywords = 'full stack developer, web developer, React, Node.js, JavaScript, TypeScript, portfolio, CodeKage',
+  title = 'CodeKage - Software Engineer Portfolio',
+  description = 'Professional software engineer specializing in modern technologies including Go, NestJS, React, Node.js, Docker, and TypeScript. View my projects, skills, and experience.',
+  keywords = 'software engineer, full stack developer, backend developer, Go, NestJS, Docker, React, Node.js, JavaScript, TypeScript, portfolio, CodeKage',
   author = 'CodeKage',
   canonicalUrl,
   ogTitle,
